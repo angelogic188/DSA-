@@ -2,7 +2,7 @@ async function loadParkingAvailability() {
     const availability =document.getElementById("availability"); 
     try{
         const response=await
-        fetch("http://127.0.0.1:5000/api/parking");
+        fetch("/api/parking");
     
     
         const data=await response.json();
@@ -54,7 +54,7 @@ document.getElementById("entry-form").addEventListener("submit", async function(
     const owner_name = document.getElementById("owner-name").value.trim();
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/api/entry", {
+        const response = await fetch("/api/entry", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -94,7 +94,7 @@ document.getElementById("exit-form").addEventListener("submit", async function(e
     const registration_no = document.getElementById("exit-registration").value.trim();
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/api/exit", {
+        const response = await fetch("/api/exit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
