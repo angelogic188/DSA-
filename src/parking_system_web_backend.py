@@ -26,7 +26,7 @@ import sqlite3
 import math
 from datetime import datetime
 from collections import deque
-
+import os
 
 # ============================================================
 # CONFIGURATION
@@ -982,4 +982,4 @@ if __name__ == "__main__":
     print("Web backend is running.")
     print("Open http://127.0.0.1:5000 in your browser.")
 
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port=int(os.environ.get("PORT",5000)))
