@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.dashboard {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 200px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #4b5563;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.parking-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.parking-section h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #111827;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #374151;
+}
+
+#availability {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#parking-slots {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.slot {
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 120px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.available {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.occupied {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+#entry-message,
+#exit-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#history {
+    overflow-x: auto;
+}
+/* Parking Slot Display */
+
+.slot {
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 120px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+
+.available {
+    background: #dcfce7;
+    color: #166534;
+    border-color: #22c55e;
+}
+
+.occupied {
+    background: #fee2e2;
+    color: #991b1b;
+    border-color: #ef4444;
+}
+
+.slot-number {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.slot-status {
+    font-size: 14px;
+}
+/* Vehicle Entry Form */
+
+#entry-form {
+    max-width: 600px;
+}
+
+#entry-form input,
+#entry-form select {
+    margin-bottom: 5px;
+}
+
+#entry-form button {
+    margin-top: 5px;
+}
+
+#entry-message {
+    padding: 10px;
+}
+/* Vehicle Exit Form */
+
+#exit-form {
+    max-width: 600px;
+}
+
+#exit-form input {
+    margin-bottom: 5px;
+}
+
+#exit-form button {
+    margin-top: 5px;
+}
+
+#exit-message {
+    padding: 10px;
+}
+/* Parking History Table */
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.history-table th,
+.history-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.history-table th {
+    background: #f3f4f6;
+    font-weight: bold;
+}
+
+.history-table tr:hover {
+    background: #f9fafb;
+}
+/* Payment Summary */
+
+.payment-summary {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.payment-summary p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#amount-payable {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#payment-button {
+    margin-top: 10px;
+}
+
+#payment-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+/* Dashboard Improvements */
+
+.dashboard .card {
+    text-align: center;
+}
+
+.dashboard .card p {
+    margin-top: 10px;
+}
+
+.dashboard .card:first-child {
+    border-top: 4px solid #374151;
+}
+
+.dashboard .card:nth-child(2) {
+    border-top: 4px solid #22c55e;
+}
+
+.dashboard .card:nth-child(3) {
+    border-top: 4px solid #ef4444;
+}

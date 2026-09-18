@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modern Parking Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Modern Parking Management System</h1>
+        <p>Smart and efficient parking management</p>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Parking Slots</h3>
+                <p id="total-slots">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Available Slots</h3>
+                <p id="available-slots">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Occupied Slots</h3>
+                <p id="occupied-slots">--</p>
+            </div>
+
+        </section>
+
+
+        <!-- Parking Availability -->
+        <section class="parking-section">
+
+            <h2>Parking Availability</h2>
+
+            <p id="availability">
+                Parking information will appear here.
+            </p>
+
+            <div id="parking-slots">
+
+    <div class="slot available">
+        <div class="slot-number">A01</div>
+        <div class="slot-status">Available</div>
+    </div>
+
+    <div class="slot available">
+        <div class="slot-number">A02</div>
+        <div class="slot-status">Available</div>
+    </div>
+
+    <div class="slot available">
+        <div class="slot-number">A03</div>
+        <div class="slot-status">Available</div>
+    </div>
+
+    <div class="slot available">
+        <div class="slot-number">A04</div>
+        <div class="slot-status">Available</div>
+    </div>
+
+    <div class="slot occupied">
+        <div class="slot-number">A05</div>
+        <div class="slot-status">Occupied</div>
+    </div>
+
+    <div class="slot available">
+        <div class="slot-number">A06</div>
+        <div class="slot-status">Available</div>
+    </div>
+
+    <div class="slot available">
+        <div class="slot-number">A07</div>
+        <div class="slot-status">Available</div>
+    </div>
+
+    <div class="slot available">
+        <div class="slot-number">A08</div>
+        <div class="slot-status">Available</div>
+    </div>
+
+    <div class="slot available">
+        <div class="slot-number">A09</div>
+        <div class="slot-status">Available</div>
+    </div>
+
+    <div class="slot available">
+        <div class="slot-number">A10</div>
+        <div class="slot-status">Available</div>
+    </div>
+
+</div>
+            </div>
+
+        </section>
+
+
+        <!-- Vehicle Entry -->
+        <section class="parking-section">
+
+            <h2>Vehicle Entry</h2>
+
+            <form id="entry-form">
+
+                <label for="registration">Vehicle Registration Number</label>
+                <input
+                    type="text"
+                    id="registration"
+                    placeholder="e.g. KDA 123A"
+                    required
+                >
+
+                <br><br>
+
+                <label for="vehicle-type">Vehicle Type</label>
+                <select id="vehicle-type" required>
+                    <option value="">Select vehicle type</option>
+                    <option value="Car">Car</option>
+                    <option value="Motorcycle">Motorcycle</option>
+                    <option value="Van">Van</option>
+                    <option value="Truck">Truck</option>
+                </select>
+
+                <br><br>
+
+                <label for="owner-name">Owner Name</label>
+                <input
+                    type="text"
+                    id="owner-name"
+                    placeholder="Enter owner name"
+                    required
+                >
+
+                <br><br>
+
+                <button type="submit">Record Vehicle Entry</button>
+
+            </form>
+
+            <p id="entry-message"></p>
+
+        </section>
+
+
+        <!-- Vehicle Exit -->
+        <section class="parking-section">
+
+            <h2>Vehicle Exit</h2>
+
+            <form id="exit-form">
+
+                <label for="exit-registration">
+                    Vehicle Registration Number
+                </label>
+
+                <input
+                    type="text"
+                    id="exit-registration"
+                    placeholder="e.g. KDA 123A"
+                    required
+                >
+
+                <br><br>
+
+                <button type="submit">Process Vehicle Exit</button>
+
+            </form>
+
+            <p id="exit-message"></p>
+
+        </section>
+
+
+        <!-- Parking History -->
+        <section class="parking-section">
+
+            <h2>Parking History</h2>
+
+            <div id="history">
+
+    <table class="history-table">
+
+        <thead>
+            <tr>
+                <th>Registration</th>
+                <th>Entry Time</th>
+                <th>Exit Time</th>
+                <th>Duration</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+
+        <tbody id="history-body">
+
+            <tr>
+                <td>KDA 123A</td>
+                <td>08:30 AM</td>
+                <td>10:45 AM</td>
+                <td>2 hrs 15 min</td>
+                <td>KSh 110</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <!-- Payment Summary -->
+<section class="parking-section">
+
+    <h2>Payment Summary</h2>
+
+    <div class="payment-summary">
+
+        <p>
+            <strong>Vehicle:</strong>
+            <span id="payment-vehicle">--</span>
+        </p>
+
+        <p>
+            <strong>Parking Duration:</strong>
+            <span id="parking-duration">--</span>
+        </p>
+
+        <p>
+            <strong>Amount Payable:</strong>
+            <span id="amount-payable">KSh --</span>
+        </p>
+
+        <button id="payment-button">
+            Confirm Payment
+        </button>
+
+        <p id="payment-message"></p>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
