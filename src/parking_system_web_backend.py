@@ -717,7 +717,10 @@ def show_waiting_queue():
 from flask import Flask, request,jsonify
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder="../website",static_url_path="")
+@app.route("/")
+def home():
+    return app.send_static_file("index.html")
 CORS(app)
 
 

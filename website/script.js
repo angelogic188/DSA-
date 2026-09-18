@@ -130,7 +130,7 @@ document.getElementById("exit-form").addEventListener("submit", async function(e
         document.getElementById("exit-form").reset();
 
         loadParkingAvailability();
-        loadParkingHistory()
+        loadParkingHistory();
 
     } catch (error) {
         console.error("Exit error:", error);
@@ -143,7 +143,7 @@ document.getElementById("exit-form").addEventListener("submit", async function(e
 
 async function loadParkingHistory() {
     try {
-        const response = await fetch("http://127.0.0.1:5000/api/history");
+        const response = await fetch("/api/history");
 
         if (!response.ok) {
             throw new Error("Could not load parking history.");
